@@ -1,0 +1,36 @@
+
+
+
+<% if !(@same_user) %>
+	<%= link_to 'My Profile' ,  profile_path(:id => current_user.id) %>
+	<%= link_to "Back" ,  root_path %>
+	<h2>Welcome to the profile of <%= @email.email %> </h2>
+
+<% else %>
+	<%= link_to "Back" ,  root_path %>
+	<h2>My Profile</h2>
+	
+<% end %>
+
+<% @flag1= false %>
+<%= render partial: 'twitter/common/tweet', locals: {tweets: @tweets , flag: @flag1 } %>
+
+
+<% if !(@same_user) and @flag.blank? %>
+
+	You are not following <%= @email.email %> <br />
+    <%= link_to 'Follow me!!' , follow_me_profile_path(:id=> @id, :blah => 32) %>
+
+<% end %>
+
+
+
+<% if !(@same_user) and !(@flag.blank?) %>
+
+	You are following <%= @email.email %> <br />
+	<%= link_to 'Unfollow' , unfollow_me_profile_path(:id => @id) %>
+
+<% end %>
+
+
+

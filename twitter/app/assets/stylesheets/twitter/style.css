@@ -1,0 +1,27 @@
+body {
+   font-family: Helvetica, Geneva, Arial, sans-serif;
+   font-size: small;
+   font-color: #000;
+   background-color: #fff;
+}
+
+a:link, a:visited {
+   color: #CD0000;
+}
+
+a:active {
+	background-color: yellow;
+	
+}
+#other {
+
+float: right;
+text-align: right;
+}
+
+#right {
+margin-top:0px;
+float: right;
+text-align: right;
+}
+

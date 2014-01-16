@@ -1,0 +1,3 @@
+Twitter::Engine.routes.draw do
+   root :to => 'abc#index'
+end
